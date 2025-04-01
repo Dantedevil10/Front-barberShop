@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
+##Screen Shots
+
+<img src="https://github.com/user-attachments/assets/d0174239-db19-447d-8315-e919383a3558" Width="640px" alt="photo">
+<img src="https://github.com/user-attachments/assets/702bd080-2d14-4098-b96e-96a4ff74f74b" Width="640px" alt="photo">
+<img src="https://github.com/user-attachments/assets/968e9211-18ba-4ce7-9591-b91bdaa410f7" Width="640px" alt="photo">
+<img src="https://github.com/user-attachments/assets/14425858-61cb-499c-a459-7d9b2770dac0" Width="640px" alt="photo">
+<img src="https://github.com/user-attachments/assets/3150d24a-7389-4d27-901c-70d602dda88d" Width="640px" alt="photo">
+<img src="https://github.com/user-attachments/assets/58abeea2-6dd9-48e8-8649-cd555c0a3f32" Width="640px" alt="photo">
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
