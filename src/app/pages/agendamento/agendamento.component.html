@@ -1,0 +1,32 @@
+<header id="other">
+  <img src="assets/hairstyle.png" width="90px" class="logo-anim">
+  <h1>BarberShop</h1>
+  <div id="userC">
+      <p>{{ user?.name }}</p>
+      <div id="userPhoto"></div>
+  </div>        
+</header>
+
+<button routerLink="/home" style="border: none;font-size: 1rem;padding: 1%;cursor: pointer;background: none;">
+  << Voltar
+</button>
+
+<div id="conT">
+  <div class="agendamento-container">
+      <h1>Agendamento de Horários</h1>
+      <div class="form-group">
+        <label for="data">Data:</label>
+        <input type="date" id="data" [(ngModel)]="dataSelecionada">
+      </div>
+      <div class="form-group">
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" [(ngModel)]="horaSelecionada">
+      </div>
+
+      <div class="horario-info" *ngIf="horarioIndisponivel">
+        <p class="error">Horário indisponível, escolha outro horário.</p>
+      </div>
+
+      <button (click)="marcarHorario()">Marcar Horário</button>
+  </div>
+</div> 

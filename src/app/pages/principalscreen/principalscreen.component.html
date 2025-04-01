@@ -1,0 +1,27 @@
+<div>
+    <header>
+        <img src="assets/hairstyle.png" width="90px" class="logo-anim">
+        <h1>BarberShop</h1>
+        <div id="userC" routerLink="/">
+            <p>{{ user?.name }}</p>
+            <div id="userPhoto"></div>
+        </div>        
+    </header>
+
+    <div class="content">
+        <div style="display: flex;align-items: center;gap: 10px;padding: 5%;">
+            <h2>Meus Horários</h2>
+            <button class="animated-btn" routerLink="/agenda" (click)="agendarHorario()">Agendar Horário</button>
+        </div>
+        <ul id="list">
+            <li *ngFor="let horario of user?.schedules">
+                <!-- Exibindo data e hora -->
+                {{ horario.startAt | date:'shortDate' }} - {{ horario.startAt | date:'shortTime' }} 
+                até 
+                {{ horario.endAt | date:'shortTime' }}
+                <button id="editBtn">Editar Horário</button>
+                <button id="delteBtn" (click)="excluiHorario(horario.id)">Excluir Horário</button>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PrincipalscreenComponent } from './pages/principalscreen/principalscreen.component';
+import { AgendamentoComponent } from './pages/agendamento/agendamento.component';
 
 
 @NgModule({
@@ -16,6 +19,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     HomeComponent,
     FooterComponent,
     CarouselComponent,
+    LoginComponent,
+    PrincipalscreenComponent,
+    AgendamentoComponent,
   ],
   imports: [
     BrowserModule,

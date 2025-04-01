@@ -1,0 +1,73 @@
+header
+    background: white
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+#userPhoto
+    width: 40px
+    height: 40px
+    background: black
+    border-radius: 50px
+
+#userC
+    display: flex
+    align-items: center
+    gap: 10px
+    margin-right: 10px
+    padding: 10px
+    border-radius: 5px
+    transition: all ease 0.5s
+    &:hover
+        background: grey
+        cursor: pointer
+        color: white
+
+.content
+    min-height: 100vh
+
+.animated-btn
+    padding: 10px 20px
+    font-size: 16px
+    background: #3498db
+    color: white
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    transition: transform 0.2s ease, background 0.3s ease
+
+    &:hover
+        background: #2980b9
+        transform: scale(1.05)
+
+#editBtn
+    border: none
+    padding: 10px
+    font-size: 1rem
+    border-radius: 5px
+    color: white
+    background: #3683db
+    cursor: pointer
+    transition: all ease 0.5s
+    &:hover
+        background: #3683dbb4
+
+#delteBtn
+    border: none
+    padding: 10px
+    font-size: 1rem
+    border-radius: 5px
+    color: white
+    background: #e72020
+    cursor: pointer
+    transition: all ease 0.5s
+    &:hover
+        background: #e72020be
+
+#list
+    list-style: none
+    margin: 10px
+    li
+        margin: 10px
+        button
+            margin: 5px

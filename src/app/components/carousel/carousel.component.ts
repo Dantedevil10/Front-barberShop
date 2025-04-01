@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.sass']
 })
-export class CarouselComponent {
-  // Lista de cores para os slides
+export class CarouselComponent implements OnInit, OnDestroy{
+  
   images: string[] = [
     'https://www.mensroombarbershop.com/wp-content/uploads/2023/10/A1580-Mens-Room-Barber-Shop-HERO.jpg'
     , 'https://ftccollege.edu/wp-content/uploads/2023/08/barber-school.jpg'
@@ -15,13 +16,40 @@ export class CarouselComponent {
     , 'https://whyy.org/wp-content/uploads/2018/02/2018-02-02-e-lee-mike-jordan-mark-belle-philadelphia-south-street-barbers-2.jpg'
   ];
   currentIndex: number = 0;
+  private intervalId: any = null;
 
-  // Função para ir para o slide anterior
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.startSlideShow();
+    }
+  }
+
+  ngOnDestroy() {
+    this.stopSlideShow();
+  }
+
+  startSlideShow() {
+    this.stopSlideShow(); // Para evitar múltiplas execuções do intervalo
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+
+  stopSlideShow() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  }
+  
   prevSlide(): void {
     this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;
   }
 
-  // Função para ir para o slide seguinte
+  
   nextSlide(): void {
     this.currentIndex = (this.currentIndex === this.images.length - 1) ? 0 : this.currentIndex + 1;
   }

@@ -1,22 +1,90 @@
 <div>
-    <header >
-        <img src="assets/logo.png" width="300px" height="150px"> 
+    <header>
+        <h1>Barber</h1>
+        <img src="assets/hairstyle.png" width="90px" class="logo-anim">
+        <h1>Shop</h1>
     </header>
 
-    <section id="home"><br/>
-        <app-carousel/><br/>
+    <section id="home">
+        <br/>
+        <app-carousel class="fade-in"/>
+        <br/>
 
-        <div id="cont">
+        <div id="cont" class="fade-up">
             <h1>Por Que Cortar Conosco?</h1>
             <p>Nossas Barbearias são montadas por profissionais competentes que passam por um treinamento prévio
-                para testar a satisfação de nossos clientes.
-                Todos os Nossos produtos possuem selo de qualidade e revisões semestrais para controle de satisfação
-                e qualidade .
-                Tentamos ao Máximo qualificar nossos produtos e profissionais e evoluimos em cada etapa.
+                para garantir a satisfação de nossos clientes. 
+                <strong>Todos os nossos produtos possuem selo de qualidade</strong> e passam por revisões semestrais para controle de satisfação e aprimoramento contínuo. 
+                Estamos sempre evoluindo para oferecer o melhor serviço a você!
             </p>
-            <h2>Gostaria de cortar conosco ? </h2>
-            <button>Agende Agora Sua Vez</button>
+            <h2>Gostaria de cortar conosco?</h2>
+            <button class="btn-glow" routerLink="login">Agende Agora Sua Vez</button>
         </div>
+        <br/>
 
+        <div class="ot fade-in">
+            <img src="assets/trophy.png" width="150px" class="trophy-bounce">
+            <h2>Entitulada Melhor Barbearia Do Estado</h2>
+        </div>
+    </section>
+
+    <!-- Nossos Serviços -->
+    <section id="services" class="fade-up">
+        <h1>Nossos Serviços</h1>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="assets/hair-cutting.png" alt="Corte de Cabelo">
+                <h3>Corte de Cabelo</h3>
+                <p>Cortes modernos e clássicos feitos por profissionais experientes.</p>
+            </div>
+            <div class="service-card">
+                <img src="assets/barbershop.png" alt="Aparar Barba">
+                <h3>Aparar Barba</h3>
+                <p>Modelamos e cuidamos da sua barba para um visual impecável.</p>
+            </div>
+            <div class="service-card">
+                <img src="assets/facial-treatment.png" alt="Massagem Facial">
+                <h3>Massagem Facial</h3>
+                <p>Relaxamento completo para uma experiência única.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="testimonials" class="fade-in">
+        <h1>O Que Nossos Clientes Dizem</h1>
+        <div class="testimonial">
+            <p>"Ótimo atendimento e corte perfeito! Recomendo a todos!"</p>
+            <h4>- João Silva</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Ambiente incrível e profissionais altamente qualificados."</p>
+            <h4>- Lucas Mendes</h4>
+        </div>
+    </section>
+
+    <!-- Nossa Equipe -->
+    <section id="team" class="fade-up">
+        <h1>Conheça Nossa Equipe</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="assets/avatar1.webp" alt="avatar 1" style="background-color: white;">
+                <h3>Pedro Henrique</h3>
+                <p>Especialista em cortes modernos</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/avatar2.webp" alt="avatar 2" style="background-color: white;">
+                <h3>Marcos Oliveira</h3>
+                <p>Mestre em barbas e cuidados faciais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Localização -->
+    <section id="contact" class="fade-in">
+        <h1>Entre em Contato</h1>
+        <p><strong>Endereço:</strong> Rua das Barbearias, 123 - Centro</p>
+        <p><strong>Telefone:</strong> (11) 98765-4321</p>
+        <p><strong>Email:</strong> contato barbearia.com</p>
     </section>
 </div>
